@@ -31,19 +31,15 @@ with col_left:
         
 
 with col_right: 
-    st.write("###  設定區") 
-    st.button("控制項放右邊")
-    tab1, tab2, tab3 = st.tabs(["首頁", "圖表", "設定"])
+    st.write("檢視區") 
+    tab1, tab2 = st.tabs(["本月重點", "已完成事項"])
     with tab1: 
-        st.header("首頁") 
+        st.header("本月重點") 
         st.write("這是首頁內容")
     with tab2: 
-        st.header("圖表") 
+        st.header("已完成事項") 
         st.line_chart([1, 5, 2, 6, 2, 1])
-    with tab3: 
-        st.header("設定") 
-        name = st.text_input("你的名字") 
-        st.write(f"Hello {name}")
+
 
 st.write("上面是大標題")
 st.divider()
