@@ -42,7 +42,7 @@ with col_left:
         mins = st.number_input(
              "行程開始前幾分鐘提醒？",
              min_value=0, max_value=60,
-             value=15
+             value=30
             )
         
 
