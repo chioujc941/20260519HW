@@ -41,6 +41,23 @@ with col_right:
         st.header("已完成事項") 
         st.line_chart([1, 5, 2, 6, 2, 1])
 
+    view = st.segmented_control(
+              "檢視模式",
+              ["月視角", "週視角"],
+              default="月視角"
+            )
+    
+    tag = st.pills(
+              "行程屬性",
+              ["#工作", "#家庭", "#緊急"]
+            )
+    
+    mins = st.number_input(
+             "行程開始前幾分鐘提醒？",
+             min_value=0, max_value=60,
+             value=15
+            )
+
 
 st.write("上面是大標題")
 st.divider()
