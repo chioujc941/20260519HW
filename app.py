@@ -36,7 +36,7 @@ with col_right:
     with tab1:
         with st.container(border=True):
             st.header("本月重點") 
-            st.write("這是首頁內容")
+            st.write("內容")
     with tab2: 
         st.header("已完成事項") 
         st.line_chart([1, 5, 2, 6, 2, 1])
