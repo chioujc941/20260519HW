@@ -10,15 +10,12 @@ col_left, col_right = st.columns([1, 3], gap="large")
 
 with col_left:
     with st.container(border=True): 
-        st.write("行程") 
-        st.button("新增行程")
-    with st.container(border=True): 
-        st.write(" 標題：開學典禮") 
-        st.write(" 時間：09:00")
+        st.write("待辦事項") 
+        st.button("新增")
         
         title = st.text_input(
-                  "行程主旨",
-                  placeholder="請填寫會議名稱..."
+                  "待辦事項",
+                  placeholder="請填寫待辦事項名稱..."
                 )
         
         today = st.date_input(
