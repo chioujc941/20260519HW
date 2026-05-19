@@ -1,4 +1,6 @@
 import streamlit as st
+import datetime
+
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
 with st.sidebar:
     st.write("Jessie 行事曆網頁")
@@ -18,8 +20,8 @@ with col_left:
                   "行程主旨",
                   placeholder="請填寫會議名稱..."
                 )
-        import datetime
-                today = st.date_input(
+        
+        today = st.date_input(
                   "選擇日期",
                   datetime.date.today()
                 )
