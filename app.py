@@ -7,11 +7,18 @@ with st.sidebar:
 col_left, col_right = st.columns([1, 3], gap="large")
 
 with col_left:
-    st.write("###  新增區") 
-    st.button("按鈕放左邊")
+    with st.container(border=True): 
+        st.write("行程") 
+        st.button("新增行程")
     with st.container(border=True): 
         st.write(" 標題：開學典禮") 
         st.write(" 時間：09:00")
+        
+        title = st.text_input(
+                  "行程主旨",
+                  placeholder="請填寫會議名稱..."
+                )
+        
 
 with col_right: 
     st.write("###  設定區") 
@@ -27,3 +34,14 @@ with col_right:
         st.header("設定") 
         name = st.text_input("你的名字") 
         st.write(f"Hello {name}")
+
+st.write("上面是大標題")
+st.divider()
+st.write("下面是內容區塊")
+    
+st.button("按鈕 A")
+st.write("")  # 塞入一行空白間距
+st.button("按鈕 B")
+
+with st.popover("快速進階篩選"):
+    st.checkbox("隱藏已過期行程")
